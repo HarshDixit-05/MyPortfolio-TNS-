@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Harsh Dixit — Web Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <meta name="description" content="Portfolio of Harsh Dixit — Projects, Skills, Resume & Contact" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <h1 id="brand-name">Harsh Dixit</h1>
+        <p class="tagline">Web Developer • Java • Frontend • AI enthusiast</p>
+      </div>
+
+      <nav class="main-nav" aria-label="Primary">
+        <button class="nav-toggle" id="darkToggle" aria-pressed="false" title="Toggle dark mode">🌙</button>
+        <ul role="tablist" id="tabs">
+          <li><button role="tab" data-page="about" class="tab active">About</button></li>
+          <li><button role="tab" data-page="skills" class="tab">Skills</button></li>
+          <li><button role="tab" data-page="projects" class="tab">Projects</button></li>
+          <li><button role="tab" data-page="resume" class="tab">Resume</button></li>
+          <li><button role="tab" data-page="contact" class="tab">Contact</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container main-content">
+    <!-- ABOUT -->
+    <section id="about" class="page" data-page="about" aria-labelledby="about-heading">
+      <h2 id="about-heading">About Me</h2>
+      <div class="about-grid">
+        <div class="about-photo" aria-hidden="true">
+          <!-- Replace src with your photo path -->
+          <img src="WhatsApp Image 2024-12-29 at 17.33.59_55e283cb.jpg" alt="Profile photo of Harsh Dixit">
+        </div>
+        <div class="about-text">
+          <h3>Hello — I'm Harsh</h3>
+          <p>I'm a final-year computer engineering student building web apps and small AI projects. I enjoy building clean user interfaces, learning new frameworks, and participating in hackathons like Smart India Hackathon and Walmart Sparkathon. I prefer concise, easy-to-understand code and practical solutions.</p>
+          <ul class="quick-info">
+            <li><strong>Location:</strong> Pune, India</li>
+            <li><strong>Email:</strong> <a href="mailto:dixitharsh052004@gmail.com">dixitharsh052004@gmail.com</a></li>
+            <li><strong>College:</strong> Savitribai Phule Pune University</li>
+          </ul>
+          <div class="cta-row">
+            <a class="btn" href="#projects" data-nav="projects">View projects</a>
+            <a class="btn outline" href="resume.pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="page" data-page="skills" hidden aria-labelledby="skills-heading">
+      <h2 id="skills-heading">Skills</h2>
+      <p class="section-lead">Technical & soft skills. Progress bars show self-rated proficiency.</p>
+
+      <div class="skills-grid">
+        <div class="skill">
+          <div class="skill-head">
+            <span>Java</span><span class="skill-percent" data-percent="90">90%</span>
+          </div>
+          <div class="progress" aria-hidden="true"><div class="progress-bar" style="width:0%" data-target="90"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>HTML & CSS</span><span class="skill-percent" data-percent="85">85%</span>
+          </div>
+          <div class="progress"><div class="progress-bar" style="width:0%" data-target="85"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>JavaScript</span><span class="skill-percent" data-percent="80">80%</span>
+          </div>
+          <div class="progress"><div class="progress-bar" style="width:0%" data-target="80"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>SQL & Databases</span><span class="skill-percent" data-percent="75">75%</span>
+          </div>
+          <div class="progress"><div class="progress-bar" style="width:0%" data-target="75"></div></div>
+        </div>
+
+        <div class="skill">
+          <div class="skill-head">
+            <span>Communication</span><span class="skill-percent" data-percent="80">80%</span>
+          </div>
+          <div class="progress"><div class="progress-bar" style="width:0%" data-target="80"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="page" data-page="projects" hidden aria-labelledby="projects-heading">
+      <h2 id="projects-heading">Projects</h2>
+      <p class="section-lead">A few selected projects — click to view details.</p>
+
+      <div class="project-filters">
+        <label>Filter: </label>
+        <select id="projectFilter">
+          <option value="all">All</option>
+          <option value="web">Web</option>
+          <option value="ai">AI</option>
+          <option value="java">Java</option>
+        </select>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project card 1 -->
+        <article class="project-card" data-category="web">
+          <h3>Portfolio Maker (This site)</h3>
+          <p>Single-page portfolio using HTML/CSS/JS with dark mode and responsive design.</p>
+          <p class="meta">Tech: HTML, CSS, JavaScript</p>
+          <div class="card-actions">
+            <a class="btn small" href="#" onclick="return false">View</a>
+            <a class="btn small outline" href="https://github.com/HarshDixit-05/portfolio" target="_blank">Source</a>
+          </div>
+        </article>
+
+        <!-- Project card 2 -->
+        <article class="project-card" data-category="java">
+          <h3>Food Delivery Console App</h3>
+          <p>Core Java case study implementing OOP, collections and CLI menus.</p>
+          <p class="meta">Tech: Java, Maven</p>
+          <div class="card-actions">
+            <a class="btn small" href="#" onclick="return false">View</a>
+            <a class="btn small outline" href="https://github.com/HarshDixit-05/food-delivery-console-java" target="_blank">Source</a>
+          </div>
+        </article>
+
+        <!-- Project card 3 -->
+        <article class="project-card" data-category="ai">
+          <h3>ISL to Text Prototype</h3>
+          <p>Research project using computer vision to recognize Indian Sign Language gestures and produce text output.</p>
+          <p class="meta">Tech: OpenCV, Python, ML</p>
+          <div class="card-actions">
+            <a class="btn small" href="#" onclick="return false">View</a>
+            <a class="btn small outline" href="#" target="_blank">Source</a>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- RESUME -->
+    <section id="resume" class="page" data-page="resume" hidden aria-labelledby="resume-heading">
+      <h2 id="resume-heading">Resume</h2>
+      <p class="section-lead">Download or view my resume.</p>
+      <div class="resume-box">
+        <p><strong>Harsh Dixit</strong> — Final year student, Web & Java dev. CGPA: 8.49 / 10 (older)</p>
+        <ul>
+          <li>Experience: Intern at Tech Saksham; Intern at SORT Technologies; Google Developer Group core team</li>
+          <li>Skills: Java, HTML, CSS, JS, MySQL, Linux, Git</li>
+          <li>Projects: Food Delivery Console, AI Task Manager, Currency Exchange</li>
+        </ul>
+        <div class="cta-row">
+          <a class="btn" href="HarshDixit_Coz (1).pdf" target="_blank">Open Resume</a>
+          <a class="btn outline" href="HarshDixit_Coz (1).pdf" download>Download PDF</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="page" data-page="contact" hidden aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Contact & Important Links</h2>
+      <p class="section-lead">Get in touch or follow me on social.</p>
+
+      <div class="contact-grid">
+        <div class="contact-card">
+          <h3>Contact Form</h3>
+          <form id="contactForm" novalidate>
+            <label for="name">Full name</label>
+            <input id="name" name="name" required minlength="2" />
+
+            <label for="email">Email</label>
+            <input id="email" name="email" type="email" required />
+
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="4" required minlength="6"></textarea>
+
+            <div class="form-row">
+              <button class="btn" type="submit">Send</button>
+              <button class="btn outline" type="reset">Reset</button>
+            </div>
+            <p id="formStatus" aria-live="polite"></p>
+          </form>
+        </div>
+
+        <aside class="links-card">
+          <h3>Important Links</h3>
+          <ul class="socials">
+            <li><a href="https://github.com/HarshDixit-05" target="_blank">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/harsh-dixit-h05" target="_blank">LinkedIn</a></li>
+            <li><a href="mailto:dixitharsh052004@gmail.com">Email</a></li>
+          </ul>
+
+          <div class="visitor-counter">
+            <h4>Visitor Counter</h4>
+            <p>Visits (this browser): <strong id="visitCount">0</strong></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Harsh Dixit — Built with ❤️ • <a href="https://github.com/HarshDixit-05">GitHub</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
